@@ -63,3 +63,32 @@ section header{
     }
   }
 }
+
+#weekly{
+
+  grid-area: weekly;
+
+  /* Seleciona o primeiro div da id weekly */
+  &>div{
+    grid-template-columns: repeat(4, 292px);
+  }
+
+  img{
+    height: 160px;
+  }
+
+  figure{
+    position: relative;
+
+    .content-tag{
+      position: absolute;
+      top: 8px;
+      left: 8px;
+    }
+
+    p{
+      margin-top: 8px;
+      font-weight: 800;
+    }
+  }
+}
