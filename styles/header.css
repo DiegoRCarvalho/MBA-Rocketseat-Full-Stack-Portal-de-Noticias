@@ -1,0 +1,29 @@
+#primary{
+  /* Coloca padding de 20 px apenas no eixo vertical, em cima e em baixo */
+  padding-block: 20px;
+
+  div{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  /* Nesting css */
+  div:nth-child(2){
+
+    /* coloca margin automática no eixo horizontal ( X e Y) */
+    margin-inline: auto;
+  }
+
+  div:nth-child(3){
+    justify-self: end;
+  }
+
+}
+
+#secondary{
+  padding-block: 14px;
+  border: solid 1px var(--stroke-color);
+  border-inline: none;
+  justify-content: space-between;
+}
