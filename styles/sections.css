@@ -19,3 +19,47 @@ section header{
     }
   }
 }
+
+#featured {
+
+  grid-area: featured;
+
+  img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .card {
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+
+    /* Abaixo temos o método simplificado de escrever .card::before */
+    &::before {
+      /* cria um elemento HTML com css */
+      content: "";
+      position: absolute;
+      inset: 0;
+      top: 50%;
+      background: linear-gradient(180deg,
+          transparent 0%,
+          #020617 100%);
+    }
+
+    figcaption {
+      position: absolute;
+      bottom: 0;
+
+      padding: 24px;
+
+      /* seleciona apenas os elementos que tem a classe text-lg */
+      &:has(.text-lg) {
+        padding: 12px;
+      }
+
+      h2 {
+        margin-top: 8px;
+      }
+    }
+  }
+}
